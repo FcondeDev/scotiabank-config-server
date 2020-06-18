@@ -1,0 +1,16 @@
+server:
+  port: 4000
+  servlet:
+    context-path: /config-server
+spring:
+  application:
+    name: scotiabank-config-server
+  cloud:
+    config:
+      allowOverride: true
+      overrideNone: true
+      overrideSystemProperties: false
+      server:
+        git:
+          uri: https://github.com/FcondeDev/scotiabank-config-server.git
+          searchPaths: '{application}'
